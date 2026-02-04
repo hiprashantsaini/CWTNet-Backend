@@ -2,9 +2,9 @@
 	"name": "linkedin-clone",
 	"version": "1.0.0",
 	"description": "",
-	"main": "backend/server.js",
+	"main": "server.js",
 	"scripts": {
-		"dev": "nodemon backend/server.js",
+		"dev": "nodemon server.js",
 		"start": "nodemon server.js"
 	},
 	"keywords": [],
