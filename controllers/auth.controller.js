@@ -236,8 +236,8 @@ export const login = async (req, res) => {
 		await res.cookie("jwt-linkedin", token, {
 			httpOnly: true,
 			maxAge: 3 * 24 * 60 * 60 * 1000,
-			sameSite: "strict",
-			secure: process.env.NODE_ENV === "production",
+			sameSite: "none",
+			secure: true,
 		});
 
 		res.json({ message: "Logged in successfully" });
