@@ -109,6 +109,8 @@ export const createComment = async (req, res) => {
 		const postId = req.params.id;
 		const { content } = req.body;
 
+		console.log("Creating comment on post:", postId, "with content:", content,req.user._id);
+
 		const post = await Post.findByIdAndUpdate(
 			postId,
 			{

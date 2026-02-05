@@ -6,7 +6,11 @@ const postSchema = new mongoose.Schema(
 		content: { type: String },
 		image: { type: String },
 		likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Like" }],
-		comments: [{type:mongoose.Schema.Types.ObjectId,ref:"Comment"}],
+		comments: [{
+			user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+			content: { type: String },
+			createdAt: { type: Date, default: Date.now }
+		}],
 		visibility:{
 			type:String,
 			enum:['public','private'],
