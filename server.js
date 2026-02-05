@@ -23,6 +23,7 @@ import userRoutes from "./routes/user.route.js";
 import { connectDB } from "./lib/db.js";
 import { app, server } from "./socket/socket.js";
 dotenv.config();
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
@@ -77,5 +78,4 @@ app.use("/api/v1/message", messageRoutes);
 
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    connectDB();
 });
