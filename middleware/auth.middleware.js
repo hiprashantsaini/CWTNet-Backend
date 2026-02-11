@@ -6,7 +6,7 @@ console.log("JWT Secret:", process.env.JWT_SECRET);
 
 export const protectRoute = async (req, res, next) => {
 	try {
-		const token = req.cookies["jwt-linkedin"];
+		const token = req.cookies["cwtnet"];
 
 		if (!token) {
 			return res.status(401).json({ message: "Unauthorized - No Token Provided" });
